@@ -1,0 +1,21 @@
+group 'baris'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'baris.initializer.EmbeddedJetty'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.7.0'
+    compile 'org.springframework:spring-webmvc:4.2.3.RELEASE'
+    compile 'org.springframework.security:spring-security-web:4.2.3.RELEASE'
+    compile 'org.springframework.security:spring-security-config:4.2.3.RELEASE'
+    compile 'org.eclipse.jetty:jetty-servlet:9.0.6.v20130930'
+    compile 'org.slf4j:slf4j-log4j12:1.7.5'
+}
